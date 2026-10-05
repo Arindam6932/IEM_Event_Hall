@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IEM Salt Lake campus events and student experience portal">
+  <title>IEM Event Hall — Institute of Engineering & Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#home">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="announcement">
+    <span class="announcement-dot"></span>
+    <span id="announcementText">IEM Salt Lake • Student Events Portal • Discover. Participate. Create.</span>
+    <button id="nextAnnouncement" aria-label="Next announcement">→</button>
+  </div>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="#home" aria-label="IEM Event Hall home">
+        <img class="iem-logo" src="iem-logo.svg" alt="IEM logo">
+        <span>IEM <b>Event Hall</b></span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a class="active" href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#schedule">My Schedule</a>
+        <a href="#register">Register</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#organizer">Organize</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Feedback</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="theme-btn" id="themeBtn" aria-label="Toggle theme" title="Toggle light/dark theme">
+          <span id="themeIcon">☾</span>
+        </button>
+        <a class="nav-cta" href="#register">Register <span>↗</span></a>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <div class="location-pill">● SALT LAKE, KOLKATA <span>•</span> IEM</div>
+        <p class="eyebrow hero-college-name">INSTITUTE OF ENGINEERING & MANAGEMENT</p>
+        <h1>Where campus<br>life <em>comes alive.</em></h1>
+        <p class="hero-text">
+          One place to discover technical fests, hackathons, workshops, cultural
+          programs, debates, sports and student-led experiences at IEM.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#events">Explore events <span>→</span></a>
+          <a class="btn secondary" href="#register">Register now</a>
+        </div>
+
+        <div class="hero-proof">
+          <div class="avatar-stack">
+            <span>R</span><span>A</span><span>S</span><span>+</span>
+          </div>
+          <div><strong>500+ students</strong><small>already exploring campus events</small></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="campus-image">
+          <img src="https://studyriserr.com/images/gal_img/IEM%20Kolkata-Academic-studyriser-97.jpg"
+               alt="IEM Kolkata academic building"
+               onerror="this.style.display='none'">
+          <div class="image-fallback">
+            <span>IEM</span>
+            <strong>Institute of<br>Engineering & Management</strong>
+            <small>Salt Lake Electronics Complex • Kolkata</small>
+          </div>
+          <div class="image-overlay"></div>
+          <div class="image-caption">
+            <span>01 / CAMPUS</span>
+            <strong>Build your next<br>experience here.</strong>
+          </div>
+        </div>
+
+        <div class="floating-card stat-card">
+          <span class="stat-icon">✦</span>
+          <strong>12+</strong>
+          <span>event formats</span>
+        </div>
+      </div>
+
+      <div class="hero-countdown-bar" aria-label="Countdown to next event">
+        <div class="countdown-intro">
+          <span class="countdown-kicker"><i></i> NEXT UP</span>
+          <strong id="countdownEventName">Build for Tomorrow</strong>
+          <small><span id="countdownEventDate">18 OCT 2026</span><b>•</b><span>Next campus experience</span></small>
+        </div>
+        <div class="hero-countdown">
+          <div><b id="countDays">00</b><span>DAYS</span></div>
+          <div><b id="countHours">00</b><span>HRS</span></div>
+          <div><b id="countMinutes">00</b><span>MIN</span></div>
+          <div><b id="countSeconds">00</b><span>SEC</span></div>
+        </div>
+      </div>
+
+      <div class="hero-bottom">
+        <div><span>01</span><strong>DISCOVER</strong><small>Find something interesting</small></div>
+        <div><span>02</span><strong>CONNECT</strong><small>Meet your community</small></div>
+        <div><span>03</span><strong>CREATE</strong><small>Make an experience</small></div>
+        <div class="hero-scroll"><span>Scroll to explore</span><b>↓</b></div>
+      </div>
+    </section>
+
+    <!-- QUICK STATS -->
+    <section class="stats-strip section">
+      <div><strong>15+</strong><span>Upcoming experiences</span><small>Across the campus calendar</small></div>
+      <div><strong>06</strong><span>Event categories</span><small>Tech • culture • sports & more</small></div>
+      <div><strong>500+</strong><span>Student participants</span><small>Built for an active community</small></div>
+      <div><strong>24h</strong><span>Innovation challenges</span><small>Build • test • present</small></div>
+      <div class="live-status"><i></i><span>Portal status<br><b>All systems live</b><small>Local demo data synced</small></span></div>
+    </section>
+
+    <!-- EVENTS -->
+    <section class="section event-section" id="events">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE CAMPUS CALENDAR</p>
+          <h2>Something is always<br><em>happening.</em></h2>
+        </div>
+        <p>Explore events by category, search by name, or open an event for more details.</p>
+      </div>
+
+      <div class="event-tools">
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="all">All <span>12</span></button>
+          <button class="filter" data-filter="technical">Technical</button>
+          <button class="filter" data-filter="workshop">Workshop</button>
+          <button class="filter" data-filter="cultural">Cultural</button>
+          <button class="filter" data-filter="competition">Competition</button>
+          <button class="filter" data-filter="sports">Sports</button>
+          <button class="filter" data-filter="community">Community</button>
+        </div>
+        <label class="search-box">
+          <span>⌕</span>
+          <input id="eventSearch" type="search" placeholder="Search events...">
+        </label>
+      </div>
+
+      <div class="event-insight-row">
+        <div class="event-insight"><span class="insight-icon">◷</span><div><b>Plan ahead</b><small>Open an event to see date, venue and format before registering.</small></div></div>
+        <div class="event-insight"><span class="insight-icon">★</span><div><b>Build your shortlist</b><small>Save interesting events and they will appear in My Schedule.</small></div></div>
+        <div class="event-insight"><span class="insight-icon">＋</span><div><b>Keep your calendar clean</b><small>Download an .ics file for any event with one click.</small></div></div>
+      </div>
+
+      <div class="event-grid" id="eventGrid">
+        <article class="event-card featured" data-category="technical" data-title="Build for Tomorrow">
+          <div class="event-art art-blue">
+            <span>FEATURED</span><b>18 OCT</b><i>⌁</i>
+          </div>
+          <div class="event-body">
+            <div class="tag-row"><span>TECHNICAL</span><span>24 HRS</span></div>
+            <h3>Build for Tomorrow</h3>
+            <p>24-hour innovation hackathon for ideas that solve real problems.</p>
+            <div class="event-meta"><span>⌖ Innovation Lab</span><span>Teams 2–4</span></div>
+            <button class="text-link details-btn">View details →</button>
+          </div>
+        </article>
+
+        <article class="event-card" data-category="technical" data-title="SYTRON">
+          <div class="event-art art-purple"><span>TECH FEST</span><b>24 OCT</b><i>⌬</i></div>
+          <div class="event-body">
+            <div class="tag-row"><span>TECHNICAL</span><span>2 DAYS</span></div>
+            <h3>SYTRON</h3>
+            <p>IoT, robotics, coding, Gen-AI challenges, quizzes and tech talks.</p>
+            <div class="event-meta"><span>⌖ IEM Campus</span><span>Multiple tracks</span></div>
+            <button class="text-link details-btn">View details →</button>
+          </div>
+        </article>
+
+        <article class="event-card" data-category="workshop" data-title="Code to Console">
+          <div class="event-art art-green"><span>WORKSHOP</span><b>27 OCT</b><i>&lt;/&gt;</i></div>
+          <div class="event-body">
+            <div class="tag-row"><span>WORKSHOP</span><span>2 HRS</span></div>
+            <h3>Code to Console</h3>
+            <p>A practical coding session focused on problem solving and implementation.</p>
+            <div class="event-meta"><span>⌖ CSE Lab</span><span>Beginner friendly</span></div>
+            <button class="text-link details-btn">View details →</button>
+          </div>
+        </article>
+
+        <article class="event-card" data-category="technical" data-title="Lenscape">
+          <div class="event-art art-orange"><span>CREATIVE TECH</span><b>30 OCT</b><i>◉</i></div>
+          <div class="event-body">
+            <div class="tag-row"><span>TECHNICAL</span><span>1 DAY</span></div>
+            <h3>Lenscape</h3>
+            <p>Photography, visual storytelling and a creative campus photo walk.</p>
+            <div class="event-meta"><span>⌖ Campus</span><span>Open entry</span></div>
+            <button class="text-link details-btn">View details →</button>
+          </div>
+        </article>
+
+        <article class="event-card" data-category="competition" data-title="Robotics Arena">
+          <div class="event-art art-dark"><span>COMPETITION</span><b>02 NOV</b><i>⚙</i></div>
+          <div class="event-body">
+            <div class="tag-row"><span>COMPETITION</span><span>3 ROUNDS</span></div>
+            <h3>Robotics Arena</h3>
+            <p>Design, build and test robots through fast-paced challenge rounds.</p>
+            <div class="event-meta"><span>⌖ Robotics Lab</span><span>Teams 3–5</span></div>
+            <button class="text-link details-btn">View details →</button>
+          </div>
+        </article>
+
+        <article class="event-card" data-category="cultural" data-title="Campus Fest">
+          <div class="event-art art-pink"><span>CULTURAL</span><b>07 NOV</b><i>✦</i></div>
+          <div class="event-body">
+            <div class="tag-row"><span>CULTURAL</span><span>EVENING</span></div>
+            <h3>Campus Fest</h3>
+            <p>Music, dance, food, performances and student showcases.</p>
+            <div class="event-meta"><span>⌖ Main Ground</span><span>6 PM onwards</span></div>
+            <button class="text-link details-btn">View details →</button>
+          </div>
+        </article>
+
+        <article class="event-card" data-category="competition" data-title="Future Forum">
+          <div class="event-art art-yellow"><span>DEBATE</span><b>10 NOV</b><i>◌</i></div>
+          <div class="event-body">
+            <div class="tag-row"><span>COMPETITION</span><span>90 MIN</span></div>
+            <h3>Future Forum</h3>
+            <p>Structured debates on technology, society, business and tomorrow.</p>
+            <div class="event-meta"><span>⌖ Seminar Hall</span><span>Individual</span></div>
+            <button class="text-link details-btn">View details →</button>
+          </div>
+        </article>
+
+        <article class="event-card" data-category="sports" data-title="IEM Sports League">
+          <div class="event-art art-cyan"><span>SPORTS</span><b>14 NOV</b><i>↗</i></div>
+          <div class="event-body">
+            <div class="tag-row"><span>SPORTS</span><span>LEAGUE</span></div>
+            <h3>IEM Sports League</h3>
+            <p>Football, cricket, table tennis, chess and indoor games.</p>
+            <div class="event-meta"><span>⌖ Sports Complex</span><span>Team entry</span></div>
+            <button class="text-link details-btn">View details →</button>
+          </div>
+        </article>
+
+        <article class="event-card" data-category="community" data-title="Green Campus Drive">
+          <div class="event-art art-leaf"><span>COMMUNITY</span><b>18 NOV</b><i>♧</i></div>
+          <div class="event-body">
+            <div class="tag-row"><span>COMMUNITY</span><span>OPEN</span></div>
+            <h3>Green Campus Drive</h3>
+            <p>Student-led sustainability activities and campus awareness drive.</p>
+            <div class="event-meta"><span>⌖ Campus</span><span>Volunteer</span></div>
+            <button class="text-link details-btn">View details →</button>
+          </div>
+        </article>
+
+        <article class="event-card" data-category="workshop" data-title="AI Product Lab">
+          <div class="event-art art-violet"><span>WORKSHOP</span><b>21 NOV</b><i>✧</i></div>
+          <div class="event-body">
+            <div class="tag-row"><span>WORKSHOP</span><span>3 HRS</span></div>
+            <h3>AI Product Lab</h3>
+            <p>Turn an AI idea into a usable prototype with product thinking.</p>
+            <div class="event-meta"><span>⌖ Innovation Lab</span><span>Intermediate</span></div>
+            <button class="text-link details-btn">View details →</button>
+          </div>
+        </article>
+
+        <article class="event-card" data-category="cultural" data-title="Word Waves">
+          <div class="event-art art-red"><span>LITERARY</span><b>25 NOV</b><i>“</i></div>
+          <div class="event-body">
+            <div class="tag-row"><span>CULTURAL</span><span>STAGE</span></div>
+            <h3>Word Waves</h3>
+            <p>Poetry, spoken word and original writing from the student community.</p>
+            <div class="event-meta"><span>⌖ CII Auditorium</span><span>Open mic</span></div>
+            <button class="text-link details-btn">View details →</button>
+          </div>
+        </article>
+
+        <article class="event-card" data-category="competition" data-title="UI/UX Sprint">
+          <div class="event-art art-sky"><span>DESIGN</span><b>29 NOV</b><i>▱</i></div>
+          <div class="event-body">
+            <div class="tag-row"><span>COMPETITION</span><span>4 HRS</span></div>
+            <h3>UI/UX Sprint</h3>
+            <p>Design a polished interface from a surprise real-world brief.</p>
+            <div class="event-meta"><span>⌖ Design Studio</span><span>Solo / Duo</span></div>
+            <button class="text-link details-btn">View details →</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="empty-state" id="emptyState">
+        <strong>No events found.</strong>
+        <span>Try another search or category.</span>
+      </div>
+    </section>
+
+    <!-- STUDENT DASHBOARD -->
+    <section class="section schedule-section" id="schedule">
+      <div class="section-heading">
+        <div><p class="eyebrow">YOUR EVENT DESK</p><h2>Plan your<br><em>campus week.</em></h2></div>
+        <p>Save events you care about, review your registrations and keep a personal shortlist on this device.</p>
+      </div>
+      <div class="schedule-overview">
+        <div class="schedule-stat"><span>SHORTLISTED</span><strong id="scheduleSavedTotal">0</strong><small>events you want to attend</small></div>
+        <div class="schedule-stat"><span>REGISTERED</span><strong id="scheduleRegisteredTotal">0</strong><small>confirmed demo passes</small></div>
+        <div class="schedule-stat"><span>NEXT EVENT</span><strong id="scheduleNextDays">—</strong><small id="scheduleNextName">Choose an event to begin</small></div>
+        <div class="schedule-stat schedule-status"><i></i><div><strong>PERSONAL DESK</strong><small>Synced to this browser</small></div></div>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="dashboard-card schedule-card">
+          <div class="dashboard-card-head"><div><span class="step-label">SAVED EVENTS</span><h3>Your shortlist</h3><p class="card-subtitle">Keep interesting events together so you can decide later.</p></div><span class="count-badge" id="savedCount">0</span></div>
+          <div class="saved-events" id="savedEvents"><div class="dashboard-empty">No saved events yet.<br><span>Use ☆ on any event card to add one.</span></div></div>
+        </div>
+        <div class="dashboard-card registration-card">
+          <div class="dashboard-card-head"><div><span class="step-label">YOUR PASSES</span><h3>Registrations</h3><p class="card-subtitle">Your generated passes and participation details.</p></div><span class="count-badge" id="registrationCount">0</span></div>
+          <div id="registrationList" class="registration-list"><div class="dashboard-empty">No registrations on this device.</div></div>
+        </div>
+      </div>
+
+      <div class="dashboard-card upcoming-card">
+        <div class="dashboard-card-head"><div><span class="step-label">UPCOMING CAMPUS TIMELINE</span><h3>What’s happening next</h3><p class="card-subtitle">A quick view of the next experiences, with your saved and registered events highlighted.</p></div><a class="mini-action" href="#events">Explore all events ↗</a></div>
+        <div class="schedule-timeline" id="scheduleTimeline"></div>
+      </div>
+
+      <div class="schedule-planner-grid">
+        <div class="planner-card">
+          <span class="step-label">WEEKLY PLANNER</span>
+          <h3>Turn events into a plan.</h3>
+          <p>Use your shortlist as a lightweight campus planner. The cards below are generated from the same event data used by the countdown and registration desk.</p>
+          <div class="planner-metrics">
+            <div><strong id="plannerDays">7</strong><span>days ahead</span></div>
+            <div><strong id="plannerTech">0</strong><span>technical</span></div>
+            <div><strong id="plannerCulture">0</strong><span>culture / community</span></div>
+          </div>
+        </div>
+        <div class="planner-card checklist-card">
+          <span class="step-label">BEFORE YOU GO</span>
+          <h3>Quick preparation checklist.</h3>
+          <label><input type="checkbox"> Check the event time and venue</label>
+          <label><input type="checkbox"> Add important events to your calendar</label>
+          <label><input type="checkbox"> Keep your registration pass ready</label>
+          <label><input type="checkbox"> Arrive 10–15 minutes early</label>
+        </div>
+        <div class="planner-card category-card">
+          <span class="step-label">YOUR MIX</span>
+          <h3>Explore beyond one category.</h3>
+          <div class="category-bars">
+            <div><span>Technical</span><i><b style="width:78%"></b></i></div>
+            <div><span>Creative</span><i><b style="width:52%"></b></i></div>
+            <div><span>Community</span><i><b style="width:40%"></b></i></div>
+            <div><span>Sports</span><i><b style="width:31%"></b></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="schedule-note">
+        <div><b>How it works</b><span>Save an event with ☆, register through the form, or add a saved event directly to your calendar.</span></div>
+        <button class="text-link" id="clearLocalData" type="button">Clear my local data ↗</button>
+      </div>
+    </section>
+
+    <!-- REGISTER -->
+    <section class="register-section section" id="register">
+      <div class="register-panel">
+        <div class="register-copy">
+          <p class="eyebrow">JOIN THE EXPERIENCE</p>
+          <h2>One form.<br><em>Many possibilities.</em></h2>
+          <p>Register as a participant, volunteer or organizer. Your details stay on this demo page.</p>
+
+          <div class="registration-steps">
+            <div><b>01</b><span>Enter details</span></div>
+            <div><b>02</b><span>Verify email</span></div>
+            <div><b>03</b><span>Choose event</span></div>
+            <div><b>04</b><span>Confirm</span></div>
+          </div>
+
+          <div class="form-security"><span>✓</span> Demo-only registration • No server submission</div>
+          <div class="registration-benefits">
+            <div><b>01</b><span><strong>Instant pass</strong><small>Generate a unique demo ticket after submission.</small></span></div>
+            <div><b>02</b><span><strong>Schedule sync</strong><small>Your registration appears in My Schedule.</small></span></div>
+            <div><b>03</b><span><strong>Calendar ready</strong><small>Keep the event date handy with an .ics file.</small></span></div>
+          </div>
+        </div>
+
+        <form id="registrationForm" class="form">
+          <div class="form-row">
+            <label>Full name<input type="text" id="name" required placeholder="Your name"></label>
+            <label>Roll number<input type="text" id="roll" required placeholder="e.g. 24CSE102"></label>
+          </div>
+
+          <div class="form-row">
+            <label>Department
+              <select id="department" required>
+                <option value="">Select department</option>
+                <option>CSE</option><option>CSE (IoT)</option><option>CSE (IoTCSBT)</option>
+                <option>IT</option><option>ECE</option><option>EE</option><option>EEE</option><option>ME</option>
+              </select>
+            </label>
+            <label>Year
+              <select id="year" required>
+                <option value="">Select year</option><option>1st Year</option><option>2nd Year</option>
+                <option>3rd Year</option><option>4th Year</option><option>Postgraduate</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>Email
+              <div class="verify-field">
+                <input type="email" id="email" required placeholder="name@example.com">
+                <button type="button" id="verifyEmailBtn">Verify</button>
+              </div>
+            </label>
+            <label>Mobile number<input type="tel" id="mobile" required placeholder="10-digit mobile number"></label>
+          </div>
+          <p class="verify-status" id="verifyStatus">Email verification is a demo interaction.</p>
+
+          <div class="form-row">
+            <label>Gender
+              <select id="gender" required>
+                <option value="">Select</option><option>Male</option><option>Female</option>
+                <option>Other</option><option>Prefer not to say</option>
+              </select>
+            </label>
+            <label>Role
+              <select id="role" required>
+                <option value="">Choose role</option><option>Participant</option><option>Volunteer</option><option>Organizer</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>Event
+              <select id="event" required>
+                <option value="">Choose event</option>
+                <option>Build for Tomorrow</option><option>SYTRON</option><option>Code to Console</option>
+                <option>Lenscape</option><option>Robotics Arena</option><option>Campus Fest</option>
+                <option>Future Forum</option><option>IEM Sports League</option><option>Green Campus Drive</option>
+                <option>AI Product Lab</option><option>Word Waves</option><option>UI/UX Sprint</option>
+              </select>
+            </label>
+            <label>Preferred participation
+              <select id="participation" required>
+                <option value="">Select</option><option>In-person</option><option>Online / Hybrid</option><option>No preference</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="check-line"><input type="checkbox" id="updates"> I want to receive event updates and reminders.</label>
+          <button class="btn primary full" type="submit">Complete registration <span>→</span></button>
+          <p class="form-note">A confirmation card will appear after submission.</p>
+        </form>
+        <div class="form-helper-strip">
+          <div><span>WHAT TO BRING</span><b>Student ID • registration pass • curiosity</b></div>
+          <div><span>DEMO FLOW</span><b>Verify → choose → confirm → receive pass</b></div>
+          <div><span>DATA NOTE</span><b>Stored locally in this browser only</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section gallery-section" id="gallery">
+      <div class="section-heading">
+        <div><p class="eyebrow">CAMPUS VISUALS</p><h2>Life between<br><em>the events.</em></h2></div>
+        <p>Tap a visual to enlarge it. Replace these images with your own IEM event photography.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <button class="gallery-item large" data-image="https://studyriserr.com/images/gal_img/IEM%20Kolkata-Academic-studyriser-97.jpg" data-title="IEM Academic Campus">
+          <img src="https://studyriserr.com/images/gal_img/IEM%20Kolkata-Academic-studyriser-97.jpg" alt="IEM academic campus">
+          <span class="gallery-label">01 • CAMPUS</span><strong>IEM<br>Salt Lake</strong>
+        </button>
+        <button class="gallery-item" data-image="https://www.collegebatch.com/static/clg-gallery/institute-of-engineering-management-kolkata-213286.jpg" data-title="IEM Campus Entrance">
+          <img src="https://www.collegebatch.com/static/clg-gallery/institute-of-engineering-management-kolkata-213286.jpg" alt="IEM campus entrance">
+          <span class="gallery-label">02 • ENTRANCE</span><strong>Welcome<br>to IEM</strong>
+        </button>
+        <button class="gallery-item gradient-art">
+          <div class="gallery-graphic"><span>03</span><b>BUILD</b><i>+</i></div>
+          <span class="gallery-label">03 • CREATE</span><strong>Make something<br>useful.</strong>
+        </button>
+        <button class="gallery-item gradient-art second">
+          <div class="gallery-graphic"><span>04</span><b>CONNECT</b><i>∞</i></div>
+          <span class="gallery-label">04 • COMMUNITY</span><strong>Meet your<br>people.</strong>
+        </button>
+        <button class="gallery-item wide">
+          <div class="gallery-graphic wide-graphic"><span>IEM</span><b>EVENTS / PEOPLE / IDEAS</b></div>
+          <span class="gallery-label">05 • CAMPUS LIFE</span><strong>There is always<br>something next.</strong>
+        </button>
+      </div>
+      <div class="gallery-meta-row">
+        <div><span>CURATED SET</span><b>Campus / People / Ideas</b><small>A visual layer for the event experience.</small></div>
+        <div><span>USE THE LIGHTBOX</span><b>Tap any photograph</b><small>Open the image at a larger size without leaving the page.</small></div>
+        <div><span>PROJECT NOTE</span><b>Easy to replace</b><small>Swap the image URLs for official event photography.</small></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section section" id="about">
+      <div class="about-grid">
+        <div>
+          <p class="eyebrow">ABOUT THIS PORTAL</p>
+          <h2>Made for the<br><em>IEM community.</em></h2>
+        </div>
+        <div>
+          <p class="large-copy">IEM Event Hall is a single-page event experience designed around how students actually discover and join campus activities.</p>
+          <p>Technical fests, workshops, cultural programs, competitions, sports and community initiatives can live together instead of being scattered across notices, posters and different pages.</p>
+          <div class="feature-list">
+            <div><span>01</span><b>Discover</b><small>Search and filter events instantly.</small></div>
+            <div><span>02</span><b>Participate</b><small>Register with your student details.</small></div>
+            <div><span>03</span><b>Contribute</b><small>Volunteer or organize an event.</small></div>
+            <div><span>04</span><b>Feedback</b><small>Tell organizers what to improve.</small></div>
+          </div>
+          <div class="about-system-grid">
+            <div><span>01</span><strong>Student-first flow</strong><small>Discover → shortlist → register → attend → reflect.</small></div>
+            <div><span>02</span><strong>Single source of context</strong><small>Event cards, countdown, schedule and passes use shared data.</small></div>
+            <div><span>03</span><strong>Prototype ready</strong><small>Local storage demonstrates persistence without a backend.</small></div>
+          </div>
+          <div class="about-roadmap"><span>ROADMAP</span><b>Authentication</b><b>Live database</b><b>Organizer approval</b><b>Email notifications</b><b>Analytics</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORGANIZER DESK -->
+    <section class="section organizer-section" id="organizer">
+      <div class="organizer-panel">
+        <div class="organizer-copy">
+          <p class="eyebrow">FOR CLUBS & ORGANIZERS</p>
+          <h2>Have an event<br><em>worth sharing?</em></h2>
+          <p>Submit a structured event proposal so the student community can discover it through the same portal.</p>
+          <div class="organizer-points"><span>✓ Event proposal</span><span>✓ Category & venue</span><span>✓ Contact details</span><span>✓ Review-ready format</span></div>
+          <div class="organizer-workflow">
+            <div><b>01</b><span>Draft</span><small>Describe the idea.</small></div>
+            <div><b>02</b><span>Review</span><small>Share logistics.</small></div>
+            <div><b>03</b><span>Publish</span><small>Reach students.</small></div>
+          </div>
+          <div class="organizer-note"><strong>Good proposals include</strong><span>clear audience • realistic timing • venue needs • expected turnout • contact person</span></div>
+        </div>
+        <form id="organizerForm" class="organizer-form">
+          <div class="form-row light-form-row">
+            <label>Event name<input id="proposalName" required placeholder="e.g. Code Carnival"></label>
+            <label>Club / organizer<input id="proposalClub" required placeholder="Club or department"></label>
+          </div>
+          <div class="form-row light-form-row">
+            <label>Category<select id="proposalCategory" required><option value="">Choose category</option><option>Technical</option><option>Workshop</option><option>Cultural</option><option>Competition</option><option>Sports</option><option>Community</option></select></label>
+            <label>Preferred date<input id="proposalDate" type="date" required></label>
+          </div>
+          <label>Short description<textarea id="proposalDescription" maxlength="300" required placeholder="What should students know?"></textarea></label>
+          <div class="form-row light-form-row"><label>Expected participants<input id="proposalSeats" type="number" min="1" max="5000" placeholder="100"></label><label>Contact email<input id="proposalEmail" type="email" required placeholder="club@iem.edu.in"></label></div>
+          <button class="btn primary" type="submit">Submit event proposal <span>→</span></button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section" id="faq">
+      <div class="section-heading"><div><p class="eyebrow">QUICK ANSWERS</p><h2>Everything you<br><em>need to know.</em></h2></div><p>Common questions about registration, saved events, participation and this prototype.</p></div>
+      <div class="faq-list">
+        <details open><summary>Is this portal connected to a live IEM database?<span>+</span></summary><p>This submission is a front-end prototype. Registrations, saved events and proposals are demonstrated with browser local storage rather than a production server.</p></details>
+        <details><summary>Can I register for more than one event?<span>+</span></summary><p>Yes. Each completed registration is stored as a separate pass in the demo dashboard.</p></details>
+        <details><summary>How does the event countdown work?<span>+</span></summary><p>The hero automatically finds the nearest future event from the built-in event calendar and updates the countdown every second.</p></details>
+        <details><summary>Can students save events for later?<span>+</span></summary><p>Yes. Use the star button on an event card. Saved events remain available after refreshing the page on the same browser.</p></details>
+        <details><summary>How could this become a production system?<span>+</span></summary><p>A backend API, authentication, database, admin approval workflow, real email verification and a proper event-management dashboard can be connected without redesigning the front-end.</p></details>
+        <details><summary>What happens when I save an event?<span>+</span></summary><p>The event title is stored in local browser storage, the star state updates immediately, and the event appears in My Schedule until you remove it or clear local data.</p></details>
+        <details><summary>Can organizers submit multiple proposals?<span>+</span></summary><p>Yes. Each proposal gets a demo proposal ID and is stored locally so the workflow can be demonstrated without a server.</p></details>
+        <details><summary>What is included in the event pass?<span>+</span></summary><p>The demo pass includes a unique ticket code, participant name, roll number, department, selected role and event date. It can also be printed or saved as a PDF.</p></details>
+        <details><summary>Does the interface work on mobile?<span>+</span></summary><p>Yes. The navigation, event cards, forms, dashboard and modal interactions are designed to collapse into a single-column mobile layout.</p></details>
+      </div>
+      <div class="faq-support-row"><div><span>STILL UNSURE?</span><b>Jump straight to registration</b></div><a class="btn secondary" href="#register">Register now →</a><div><span>FOUND AN ISSUE?</span><b>Send structured feedback</b></div><a class="btn secondary" href="#contact">Give feedback →</a></div>
+    </section>
+
+    <!-- FEEDBACK -->
+    <section class="feedback-section section" id="contact">
+      <div class="feedback-header">
+        <div><p class="eyebrow">YOUR VOICE MATTERS</p><h2>How was your<br><em>experience?</em></h2></div>
+        <p>Give structured feedback about an event, venue, registration experience or the portal itself.</p>
+      </div>
+
+      <div class="feedback-impact-row">
+        <div><strong>01</strong><span>Rate</span><small>Tell us how the experience felt.</small></div>
+        <div><strong>02</strong><span>Explain</span><small>Point to the detail that mattered.</small></div>
+        <div><strong>03</strong><span>Improve</span><small>Suggest one concrete change.</small></div>
+        <div><strong>04</strong><span>Follow up</span><small>Choose whether we can contact you.</small></div>
+      </div>
+
+      <form id="feedbackForm" class="feedback-card">
+        <div class="feedback-top">
+          <div>
+            <span class="step-label">FEEDBACK FORM</span>
+            <h3>Help us make the next one better.</h3>
+          </div>
+          <div class="required-note"><b>*</b> Required fields</div>
+        </div>
+
+        <div class="feedback-grid">
+          <div class="feedback-field full-field">
+            <label>Overall experience <b>*</b></label>
+            <div class="rating-row" id="ratingRow">
+              <button type="button" data-rating="1">★<small>1</small></button>
+              <button type="button" data-rating="2">★<small>2</small></button>
+              <button type="button" data-rating="3">★<small>3</small></button>
+              <button type="button" data-rating="4">★<small>4</small></button>
+              <button type="button" data-rating="5">★<small>5</small></button>
+            </div>
+            <input type="hidden" id="rating" required>
+            <p class="field-hint" id="ratingHint">Select a rating from 1 to 5.</p>
+          </div>
+
+          <div class="feedback-field">
+            <label for="feedbackName">Your name <b>*</b></label>
+            <input id="feedbackName" required placeholder="Full name">
+          </div>
+          <div class="feedback-field">
+            <label for="feedbackEmail">Email <b>*</b></label>
+            <input id="feedbackEmail" type="email" required placeholder="name@example.com">
+          </div>
+
+          <div class="feedback-field">
+            <label for="feedbackEvent">Which event?</label>
+            <select id="feedbackEvent">
+              <option value="">Select event</option>
+              <option>Build for Tomorrow</option><option>SYTRON</option><option>Code to Console</option>
+              <option>Lenscape</option><option>Robotics Arena</option><option>Campus Fest</option>
+              <option>Future Forum</option><option>IEM Sports League</option><option>Green Campus Drive</option>
+              <option>AI Product Lab</option><option>Word Waves</option><option>UI/UX Sprint</option>
+              <option>Portal / Website</option>
+            </select>
+          </div>
+
+          <div class="feedback-field">
+            <label for="feedbackCategory">Feedback category <b>*</b></label>
+            <select id="feedbackCategory" required>
+              <option value="">Choose category</option>
+              <option>Event content</option><option>Venue & facilities</option>
+              <option>Registration</option><option>Organization</option>
+              <option>Volunteers</option><option>Website / UI</option><option>Other</option>
+            </select>
+          </div>
+
+          <div class="feedback-field full-field">
+            <label>What did you like?</label>
+            <div class="check-grid">
+              <label><input type="checkbox" name="liked" value="Content"> Event content</label>
+              <label><input type="checkbox" name="liked" value="Organization"> Organization</label>
+              <label><input type="checkbox" name="liked" value="Venue"> Venue</label>
+              <label><input type="checkbox" name="liked" value="People"> People / networking</label>
+              <label><input type="checkbox" name="liked" value="Timing"> Timing</label>
+              <label><input type="checkbox" name="liked" value="Website"> Website experience</label>
+            </div>
+          </div>
+
+          <div class="feedback-field full-field">
+            <label>Would you recommend this experience?</label>
+            <div class="recommend-row" id="recommendRow">
+              <button type="button" data-value="Definitely">Definitely</button>
+              <button type="button" data-value="Probably">Probably</button>
+              <button type="button" data-value="Maybe">Maybe</button>
+              <button type="button" data-value="Probably not">Probably not</button>
+              <button type="button" data-value="No">No</button>
+            </div>
+            <input type="hidden" id="recommendation">
+          </div>
+
+          <div class="feedback-field full-field">
+            <label for="feedbackMessage">Tell us more <b>*</b></label>
+            <textarea id="feedbackMessage" maxlength="600" required placeholder="What worked well? What should we improve?"></textarea>
+            <div class="character-count"><span id="charCount">0</span>/600</div>
+          </div>
+
+          <div class="feedback-field">
+            <label for="improvement">One improvement you would make</label>
+            <textarea id="improvement" maxlength="250" placeholder="Your suggestion..."></textarea>
+          </div>
+
+          <div class="feedback-field">
+            <label for="contactBack">Can we contact you?</label>
+            <select id="contactBack">
+              <option>No, thank you</option><option>Yes, if needed</option><option>Yes, please follow up</option>
+            </select>
+          </div>
+
+          <div class="full-field bottom-feedback">
+            <label class="check-line"><input type="checkbox" id="anonymous"> Submit this feedback anonymously</label>
+            <button class="btn primary" type="submit">Submit detailed feedback <span>→</span></button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- FOOTER INFO -->
+    <section class="contact-info section">
+      <div class="contact-info-card">
+        <div>
+          <p class="eyebrow">IEM • SALT LAKE</p>
+          <h2>Stay connected.</h2>
+          <p>Institute of Engineering & Management, Salt Lake Electronics Complex, Kolkata — 700091, West Bengal, India.</p>
+        </div>
+        <div class="contact-links">
+          <a href="https://iem.edu.in/" target="_blank">Official IEM website ↗</a>
+          <a href="#events">Upcoming events →</a>
+          <a href="#register">Register →</a>
+          <a href="#contact">Send feedback →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+  <footer>
+    <div class="footer-brand"><span class="brand-mark"><i></i><i></i><i></i><i></i></span> IEM Event Hall</div>
+    <p>Institute of Engineering & Management • Salt Lake, Kolkata</p>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+  <!-- Registration ticket modal -->
+  <div class="modal" id="ticketModal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-box ticket-box">
+      <button class="modal-close" id="ticketClose">×</button>
+      <div class="ticket-success">✓ REGISTRATION CONFIRMED</div>
+      <div class="ticket-code" id="ticketCode">IEM-000000</div>
+      <h2 id="ticketName">Your event pass</h2>
+      <p id="ticketEvent">Event</p>
+      <div class="ticket-details">
+        <div><small>ROLL NO.</small><b id="ticketRoll">—</b></div>
+        <div><small>DEPARTMENT</small><b id="ticketDept">—</b></div>
+        <div><small>DATE</small><b id="ticketDate">—</b></div>
+        <div><small>ROLE</small><b id="ticketRole">—</b></div>
+      </div>
+      <div class="ticket-actions"><button class="btn primary" id="printTicket" type="button">Print / Save PDF ↗</button><button class="btn secondary" id="ticketDone" type="button">Done</button></div>
+    </div>
+  </div>
+
+  <!-- Event modal -->
+  <div class="modal" id="eventModal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose">×</button>
+      <span class="modal-tag" id="modalTag">EVENT</span>
+      <h2 id="modalTitle">Event title</h2>
+      <p id="modalDescription"></p>
+      <div class="modal-details">
+        <div><small>DATE</small><b id="modalDate"></b></div>
+        <div><small>VENUE</small><b id="modalVenue"></b></div>
+        <div><small>FORMAT</small><b id="modalFormat"></b></div>
+      </div>
+      <a class="btn primary full" href="#register" id="modalRegister">Register for this event →</a>
+    </div>
+  </div>
+
+  <!-- Gallery lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button id="lightboxClose">×</button>
+    <img id="lightboxImage" src="" alt="">
+    <p id="lightboxTitle"></p>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>

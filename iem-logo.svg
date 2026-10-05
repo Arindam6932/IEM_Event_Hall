@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" role="img" aria-label="IEM logo">
+  <rect width="220" height="150" rx="18" fill="#fff"/>
+  <g fill="none" stroke="#d71920" stroke-width="7" stroke-linecap="round">
+    <path d="M28 82 C10 62 13 33 34 20"/><path d="M37 99 C17 83 10 59 19 38"/>
+    <path d="M192 82 C210 62 207 33 186 20"/><path d="M183 99 C203 83 210 59 201 38"/>
+  </g>
+  <g fill="#d71920">
+    <ellipse cx="31" cy="28" rx="8" ry="16" transform="rotate(35 31 28)"/>
+    <ellipse cx="22" cy="47" rx="8" ry="16" transform="rotate(18 22 47)"/>
+    <ellipse cx="24" cy="68" rx="8" ry="16" transform="rotate(-8 24 68)"/>
+    <ellipse cx="189" cy="28" rx="8" ry="16" transform="rotate(-35 189 28)"/>
+    <ellipse cx="198" cy="47" rx="8" ry="16" transform="rotate(-18 198 47)"/>
+    <ellipse cx="196" cy="68" rx="8" ry="16" transform="rotate(8 196 68)"/>
+  </g>
+  <text x="110" y="75" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="54" font-weight="900" fill="#111827" letter-spacing="-3">IEM</text>
+  <text x="110" y="98" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="8.2" font-weight="800" fill="#18233a" letter-spacing=".35">INSTITUTE OF ENGINEERING &amp; MANAGEMENT</text>
+  <text x="110" y="116" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="7.5" font-weight="600" fill="#18233a">Good Education, Good Jobs</text>
+</svg>
